@@ -9,17 +9,9 @@
         <v-app-bar color="transparent" height="84vh" elevation=0>
           <v-spacer></v-spacer>
 
-          <v-btn icon>
-            <v-icon>mdi-bell-outline</v-icon>
-          </v-btn>
+          <app-btn-notification />
 
-          <v-btn icon class="pa-r12">
-            <v-icon>mdi-logout</v-icon>
-          </v-btn>
-
-          <v-btn icon color="transparent">
-            <v-icon></v-icon>
-          </v-btn>
+          <app-btn-logout class="mr-8" />
         </v-app-bar>
       </v-row>
       <v-row>
@@ -34,11 +26,17 @@
 <script>
 import AppNav from './AppNav';
 
+import AppBtnLogout from './AppBtnLogout';
+import AppBtnNotification from './AppBtnNotification';
+
 export default {
   name: 'AppMain',
 
   components: {
-    AppNav
+    AppNav,
+
+    AppBtnLogout,
+    AppBtnNotification
   },
 
   data: () => ({
