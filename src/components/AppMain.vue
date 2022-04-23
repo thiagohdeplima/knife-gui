@@ -6,11 +6,20 @@
     </v-col>
     <v-col cols=10 class="ma-0 pa-0">
       <v-row>
-        <v-app-bar
-          color="transparent"
-          height="84vh"
-          elevation=0
-        >
+        <v-app-bar color="transparent" height="84vh" elevation=0>
+          <v-spacer></v-spacer>
+
+          <v-btn icon>
+            <v-icon>mdi-bell-outline</v-icon>
+          </v-btn>
+
+          <v-btn icon class="pa-r12">
+            <v-icon>mdi-logout</v-icon>
+          </v-btn>
+
+          <v-btn icon color="transparent">
+            <v-icon></v-icon>
+          </v-btn>
         </v-app-bar>
       </v-row>
       <v-row>
