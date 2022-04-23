@@ -35,7 +35,7 @@
 import AppNav from './AppNav';
 
 export default {
-  name: 'App',
+  name: 'AppMain',
 
   components: {
     AppNav
