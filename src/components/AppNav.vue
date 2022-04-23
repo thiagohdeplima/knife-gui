@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer dark permanent>
+  <v-navigation-drawer :mini-variant.sync="mini" dark permanent>
     <template v-slot:prepend>
       <v-list-item>
         <v-list-item-icon>
@@ -25,7 +25,9 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title>
+            <router-link :to="item.target">{{ item.title }}</router-link>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -54,10 +56,11 @@ export default {
   name: 'AppNav',
 
   data: () => ({
+    mini: false,
     main: [
-      { title: 'Apps',           icon: 'mdi-application-braces' },
-      { title: 'Servers',        icon: 'mdi-server' },
-      { title: 'Configurations', icon: 'mdi-cog-outline' }
+      { title: 'Apps',           target: '/apps',    icon: 'mdi-application-braces' },
+      { title: 'Servers',        target: '/servers', icon: 'mdi-server' },
+      { title: 'Configurations', target: '/configs', icon: 'mdi-cog-outline' }
     ],
     apps: [
       { title: 'Versions',    icon: 'mdi-diversify' },
@@ -70,3 +73,4 @@ export default {
   }),
 };
 </script>
+

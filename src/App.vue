@@ -1,19 +1,17 @@
 <template>
   <v-app>
-    <v-main>
-      <app-nav />
-    </v-main>
+    <app-main />
   </v-app>
 </template>
 
 <script>
-import AppNav from './components/AppNav';
+import AppMain from './components/AppMain';
 
 export default {
   name: 'App',
 
   components: {
-    AppNav,
+    AppMain
   },
 
   data: () => ({
