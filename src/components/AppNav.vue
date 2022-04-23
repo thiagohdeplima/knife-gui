@@ -3,7 +3,7 @@
     <template v-slot:prepend>
       <v-list-item>
         <v-list-item-icon>
-          <v-icon x-large>mdi-alpha-k-circle-outline</v-icon>
+          <v-icon x-large>mdi-alpha-k-box-outline</v-icon>
         </v-list-item-icon>
         <v-list-item-content>
           <v-list-item-title class="text-h6">Knife</v-list-item-title>
