@@ -1,6 +1,5 @@
 <template>
-  <v-container class="ma-0 pa-0" fluid style="height: 100vh;" >
-    <v-layout fill-height>
+  <v-layout fill-height style="background-color: #eee">
     <v-col cols=2 class="ma-0 pa-0">
       <app-nav />
     </v-col>
@@ -15,12 +14,14 @@
         </v-app-bar>
       </v-row>
       <v-row>
-        <v-divider></v-divider>
-        <router-view />
+        <v-col cols=12>
+          <v-card class="elevation-1 ml-5 mr-5">
+            <router-view />
+          </v-card>
+        </v-col>
       </v-row>
     </v-col>
-    </v-layout>
-  </v-container>
+  </v-layout>
 </template>
 
 <script>
@@ -44,3 +45,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+  fade {
+    background-color: #f00;
+  }
+</style>
